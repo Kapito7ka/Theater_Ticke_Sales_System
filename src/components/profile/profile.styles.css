@@ -1,0 +1,177 @@
+.profile-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-container h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.profile-form {
+  width: 100%;
+  min-width: 600px;
+  background: rgba(2, 9, 25, 0.5);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: white;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(2, 9, 25, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.save-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 40px auto 0;
+  padding: 12px;
+  background: #FF4400;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-button:hover {
+  background: #FF5500;
+}
+
+.error-message {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff4444;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success-message {
+  background: rgba(0, 255, 0, 0.1);
+  color: #44ff44;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.save-button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.main-profile-container {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  min-height: calc(100vh - 80px);
+  justify-content: center;
+}
+
+.profile-sidebar {
+  width: 280px;
+  background: rgba(2, 9, 25, 0.5);
+  border-radius: 16px;
+  padding: 20px;
+  height: fit-content;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-item {
+  padding: 15px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background: rgba(255, 68, 0, 0.1);
+}
+
+.sidebar-item.active {
+  background: #FF4400;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-profile-container {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .profile-container {
+    width: 95%;
+    max-width: 800px;
+  }
+
+  .profile-sidebar {
+    position: static;
+    width: 95%;
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+
+  .profile-form {
+    min-width: unset;
+    width: 100%;
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile-container,
+  .profile-sidebar,
+  .profile-form {
+    width: 100%;
+  }
+
+
+  .profile-container {
+    width: 100%;
+    min-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+} 

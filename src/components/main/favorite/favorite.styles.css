@@ -1,0 +1,345 @@
+.favorite {
+    position: relative;
+    width: 100%;
+    margin-bottom: 300px;
+}
+
+.embla {
+    overflow: hidden;
+    width: 100%;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    position: relative;
+}
+
+.favorite img {
+    width: 100%;
+    height: 80vh;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    opacity: 0.6;
+    object-fit: cover;
+    object-position: center;
+}
+
+.favorite::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.favorite::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20%;
+    background: linear-gradient(to bottom, transparent, #010F29);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.favorite-wrapper {
+    position: absolute;
+    z-index: 3;
+    top: 76%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 40%;
+    background-color: rgba(1, 15, 41, 0.95);
+    padding: 40px;
+    pointer-events: auto;
+}
+
+.favorite-block-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.favorite-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.favorite-block h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: left;
+}
+
+.favorite-trending-block {
+    background-color: #0B2868;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.favorite-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+}
+
+#button1, #button2 {
+    flex: 1;
+    min-width: 120px;
+    background-color: #C1272D;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    z-index: 5;
+    pointer-events: all;
+}
+
+#button1:hover {
+    background-color: #e62932;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(193, 39, 45, 0.3);
+    opacity: 1;
+}
+
+#button1:active {
+    transform: translateY(0);
+}
+
+#button2 {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+#button2:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #e62932;
+    color: #e62932;
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+#button2:active {
+    transform: translateY(0);
+}
+
+.favorite-date_info-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #010F29;
+}
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid;
+    border-color: #fff #0000;
+    animation: l1 1s infinite;
+}
+
+@keyframes l1 {
+    to {
+        transform: rotate(.5turn)
+    }
+}
+
+.booking-modal {
+    color: white;
+}
+
+.booking-modal h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.booking-confirm-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: #C1272D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.booking-confirm-button:hover {
+    background-color: #e62932;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(193, 39, 45, 0.3);
+    opacity: 1;
+}
+
+.booking-confirm-button:active {
+    transform: translateY(0);
+}
+
+.favorite-button-container button {
+    pointer-events: all;
+}
+
+@media screen and (max-width: 768px) {
+  .favorite {
+    margin-bottom: 150px;
+  }
+
+  .favorite img {
+    height: 60vh;
+  }
+
+  .favorite-wrapper {
+    width: 100%;
+    top: 85%;
+    padding: 20px;
+    transform: translateY(-40%);
+    z-index: 3;
+  }
+
+  .favorite-block-container {
+    gap: 5px;
+  }
+
+  .favorite-block {
+    gap: 5px;
+  }
+
+  .favorite-block h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    max-height: 3.6em;
+    overflow: hidden;
+  }
+
+  .favorite-button-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    z-index: 4;
+  }
+
+  #button1, #button2 {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    display: inline-block;
+    z-index: 5;
+  }
+
+  .favorite-trending-block {
+    padding: 3px 10px;
+  }
+
+  .favorite-trending-block p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .favorite {
+    margin-bottom: 100px;
+  }
+
+  .favorite img {
+    height: 50vh;
+  }
+
+  .favorite-wrapper {
+    padding: 15px;
+    top: 80%;
+  }
+
+  .favorite-block h2 {
+    font-size: 1.2rem;
+    max-height: 2.4em;
+  }
+
+  .favorite-button-container {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #button1, #button2 {
+    width: auto;
+    flex: 1;
+    min-width: unset;
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .favorite-trending-block {
+    padding: 2px 8px;
+  }
+
+  .favorite-trending-block p {
+    font-size: 0.8rem;
+  }
+
+  .favorite-block-container {
+    gap: 0px;
+  }
+}
+
+.favorite-button-container button {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.favorite-wrapper {
+  background-color: rgba(1, 15, 41, 0.95);
+}
